@@ -1,8 +1,9 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+        docker: 19
   build:
     commands:
-       - apt update && apt install sudo
-       - curl -fsSL https://horusec.io/bin/install.sh | bash
-       - horusec start -p ./
+       - docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src/horusec-vscode horuszup/horusec-cli:latest horusec start -p /src/horusec-vscode -P $(pwd)
