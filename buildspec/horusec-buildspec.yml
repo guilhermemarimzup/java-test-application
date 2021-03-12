@@ -3,5 +3,6 @@ version: 0.2
 phases:
   build:
     commands:
+       - apt update && apt install sudo
        - curl -fsSL https://horusec.io/bin/install.sh | bash
        - horusec start -p ./
