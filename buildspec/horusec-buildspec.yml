@@ -3,4 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-       - /usr/local/bin/hoursec-cli.sh start -p ./
+       - sh /usr/local/bin/horusec start -p ./
