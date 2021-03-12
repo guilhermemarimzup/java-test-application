@@ -3,4 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-       - sh /usr/local/bin/horusec start -p ./
+       - curl -fsSL https://horusec.io/bin/install.sh | bash
+       - horusec start -p ./
