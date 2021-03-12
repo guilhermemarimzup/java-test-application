@@ -3,4 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-       - sh /usr/local/bin/hoursec-cli.sh start -p ./ -e true
+       - sh /usr/local/bin/hoursec-cli.sh start -p ./
