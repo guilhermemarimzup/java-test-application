@@ -3,6 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-       - docker version
-       - sleep 5
-       - horusec start -p ./ -P $(pwd)
+       - docker run -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd):/src/horusec horuszup/horusec-cli:latest horusec start -p /src/horusec -P $(pwd)
