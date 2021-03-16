@@ -1,0 +1,11 @@
+name: Dependency-Check
+
+on: push
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Dependency-Check
+      uses: guilhermemarimzup/dependency-vuln-checker@development
