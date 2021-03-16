@@ -3,9 +3,11 @@ name: Dependency-Check
 on: push
 
 jobs:
-  greeting:
+  dependency-check:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
+
     - name: Dependency-Check
       uses: guilhermemarimzup/dependency-vuln-checker@development
